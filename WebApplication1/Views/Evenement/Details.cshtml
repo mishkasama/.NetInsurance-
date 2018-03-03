@@ -1,0 +1,82 @@
+﻿@model Insurance.Domaine.Entity.evenement
+
+               @{
+                   ViewBag.Title = "Create";
+                   Layout = "~/Views/Shared/Admin.cshtml";
+            }
+                <div class="card-body" id="Grid">
+                    <div class="table-responsive">
+                        <div>
+                            <h4>Event Details</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <center>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Image)
+                                </dt>
+
+                                
+                                    <dd>
+                                        <img sizes="10px" width="200"
+                                             src=@Url.Content("~/Content/Upload/"+Model.Image)>
+                                    </dd>
+                               
+
+
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Title)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Title)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Start_Date)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Start_Date)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Finish_Date)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Finish_Date)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Description)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Description)
+                                </dd>
+
+
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Localisation)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Localisation)
+                                </dd>
+
+
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.EvenementId }) |
+                            @Html.ActionLink("Back to List", "List")
+                        </p>
+                        </center>
+                    </div>
+
+                </div>
+              

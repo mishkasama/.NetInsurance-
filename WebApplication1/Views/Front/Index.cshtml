@@ -1,0 +1,491 @@
+﻿@using Insurance.Domaine.Entity
+@using WebApplication1.Controllers
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+    users currentUser = ForumController.currentuser;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gp Bootstrap Template</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Front/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Front/assets/css/font-awesome.min.css">
+    <link href="~/Front/assets/css/animate.min.css" rel="stylesheet">
+    <link href="~/Front/assets/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Front/assets/css/main.css" rel="stylesheet">
+    <link href="~/Front/assets/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="~/Front/assets/js/html5shiv.js"></script>
+    <script src="~/Front/assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="homepage">
+    <header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="~/Front/assets/index.html">GCA</a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="~/Front/assets/index.html">Home</a></li>
+                        <li><a href="~/Front/assets/about-us.html">About Us</a></li>
+                        <li><a href="~/Front/assets/services.html">Services</a></li>
+                        <li><a href="~/Front/assets/portfolio.html">Portfolio</a></li>
+                        <li><a href="@Url.Action("First", "Forum")">Forum</a></li>
+                        <li><a href="~/Front/assets/contact-us.html">Contact</a></li>
+                        <li><a href="~/Front/assets/contact-us.html">  Hello,@currentUser.login</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
+    </header><!--/header-->
+
+    <div class="slider">
+        <div class="container">
+            <div id="about-slider">
+                <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators visible-xs">
+                        <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-slider" data-slide-to="1"></li>
+                        <li data-target="#carousel-slider" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="~/Front/assets/images/slider_one.jpg" class="img-responsive" alt="">
+                        </div>
+                        
+                        
+                        <div class="item">
+                            <img src="~/Front/assets/images/6.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Front/assets/images/4.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Front/assets/images/7.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+
+                    <a class="left carousel-control hidden-xs" href="~/Front/assets/#carousel-slider" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a class=" right carousel-control hidden-xs"href="~/Front/assets/#carousel-slider" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div> <!--/#carousel-slider-->
+            </div><!--/#about-slider-->
+        </div>
+    </div>
+
+    <section id="feature">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Features</h2>
+                <p class="lead"> GCA is a committee <br> that brings together all insurance companies</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-laptop"></i>
+                            <h2>Sinester Manegement</h2>
+                            <h3>You can send your sinester online</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-comments"></i>
+                            <h2>Consult Insurance</h2>
+                            <h3>You can consult and view all the insurances compagnies</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-cloud-download"></i>
+                            <h2>Product of insurance</h2>
+                            <h3>consult the product of the insurance compagnies</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    
+                  
+
+                    
+                </div><!--/.services-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+    <section id="recent-works">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Recent Works</h2>
+                <p class="lead">Star assurance , Gat assurance  <br> are with us , with GCA</p>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item1.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme</a> </h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item2.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme</a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item3.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme </a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item4.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">MultiPurpose theme </a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item5.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme</a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item6.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme </a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item7.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme </a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="~/Front/assets/images/portfolio/recent/item8.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="~/Front/assets/#">Business theme </a></h3>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                <a class="preview" href="~/Front/assets/images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#recent-works-->
+
+    <section id="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="skill">
+                        <h2>Our Skills</h2>
+                        <p>At GCA, our goal is to become the relationship bank of reference. Relationship banking is only possible with the right people – the right team – working together, sharing a common team spirit.</p>
+
+                        <div class="progress-wrap">
+                            <h3>Endorsment Management</h3>
+                            <div class="progress">
+                                <div class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                    <span class="bar-width">85%</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Consult Contract </h3>
+                            <div class="progress">
+                                <div class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                    <span class="bar-width">95%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Consult Product </h3>
+                            <div class="progress">
+                                <div class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="bar-width">80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-wrap">
+                            <h3>Localsation</h3>
+                            <div class="progress">
+                                <div class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    <span class="bar-width">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--/.col-sm-6-->
+
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="accordion">
+                        <h2>Why People like us?</h2>
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading active">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="~/Front/assets/#collapseOne1">
+                                            Expand your employability
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <div id="collapseOne1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="media accordion-inner">
+                                            <div class="pull-left">
+                                                <img class="img-responsive" src="~/Front/assets/images/accordion1.png">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4> Evolve in an international workplace</h4>
+                                                <p> Evolve in an international workplace</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="~/Front/assets/#collapseTwo1">
+                                            Compliance
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseTwo1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Be treated with respect and fairness
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="~/Front/assets/#collapseThree1">
+                                            Sharing a culture of compliance
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseThree1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Work in a caring environment
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="~/Front/assets/#collapseFour1">
+                                            Culture & Conduct
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapseFour1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        My Board colleagues and I pay especially close attention to the subject of Culture and Conduct. It is strategically important to safeguard the Group's image and ensure that each employee, at every level of the organisation, acts with integrity on a day-to-day basis in the interest of our clients, stakeholders and shareholders.
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/#accordion1-->
+                    </div>
+                </div>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#middle-->
+
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="~/Front/assets/#">About us</a></li>
+                            <li><a href="~/Front/assets/#">We are hiring</a></li>
+                            <li><a href="~/Front/assets/#">Meet the team</a></li>
+                            <li><a href="~/Front/assets/#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="~/Front/assets/#">Faq</a></li>
+                            <li><a href="~/Front/assets/#">Blog</a></li>
+                            <li><a href="~/Front/assets/#">Forum</a></li>
+                            <li><a href="~/Front/assets/#">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="~/Front/assets/#">Web Development</a></li>
+                            <li><a href="~/Front/assets/#">SEO Marketing</a></li>
+                            <li><a href="~/Front/assets/#">Theme</a></li>
+                            <li><a href="~/Front/assets/#">Development</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Partners</h3>
+                        <ul>
+                            <li><a href="~/Front/assets/#">Adipisicing Elit</a></li>
+                            <li><a href="~/Front/assets/#">Eiusmod</a></li>
+                            <li><a href="~/Front/assets/#">Tempor</a></li>
+                            <li><a href="~/Front/assets/#">Veniam</a></li>
+                        </ul>
+                    </div>
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social">
+                        <ul class="social-share">
+                            <li><a href="~/Front/assets/#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="~/Front/assets/#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="~/Front/assets/#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="~/Front/assets/#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="~/Front/assets/#"><i class="fa fa-skype"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+    </div><!--/.top-bar-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="~/Front/assets/http://bootstraptaste.com/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">bootstraptaste</a>. All Rights Reserved.
+                </div>
+                <!--
+                    All links in the footer should remain intact.
+                    Licenseing information is available at: http://bootstraptaste.com/license/
+                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
+                -->
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="~/Front/assets/#">Home</a></li>
+                        <li><a href="~/Front/assets/#">About Us</a></li>
+                        <li><a href="~/Front/assets/#">Faq</a></li>
+                        <li><a href="~/Front/assets/#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Front/assets/js/jquery.js"></script>
+    <script src="~/Front/assets/js/bootstrap.min.js"></script>
+    <script src="~/Front/assets/js/jquery.prettyPhoto.js"></script>
+    <script src="~/Front/assets/js/jquery.isotope.min.js"></script>
+    <script src="~/Front/assets/js/wow.min.js"></script>
+    <script src="~/Front/assets/js/main.js"></script>
+</body>
+</html>

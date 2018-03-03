@@ -1,0 +1,101 @@
+﻿@model WebApplication1.Models.sinisterModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sinister</h4>
+    <hr />
+    <img  style="width:200px;height:150px" src=@Url.Content("~/Content/Upload/"+@Model.urlImage)>
+
+    <dl class="dl-horizontal">
+        <dt>
+Email
+                </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+Creation Date
+                </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateCreation)
+        </dd>
+
+        <dt>
+Insured Name
+                </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameFirstname)
+        </dd>
+
+        <dt>
+Insurance Company
+                </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameInsurancCompany)
+        </dd>
+
+        <dt>
+Phone
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel)
+        </dd>
+        <dt>
+Policy Number        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.policyNum)
+        </dd>
+
+
+    </dl>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+            window.onload = function () {
+                var mapOptions = {
+                    center: new google.maps.LatLng(36.8064948, 10.181531599999971),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                var uluru = { lat: parseFloat('@Model.latitude'), lng: parseFloat('@Model.longitude') };
+
+                //Attach click event handler to the map.
+                //Create a marker and placed it on the map.
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+
+                });
+
+
+            };
+    </script>
+   
+
+    <style type="text/css">
+        #mapContainer {
+            height: 500px;
+            width: 800px;
+            border: 10px solid #eaeaea;
+        }
+    </style>
+
+
+</div>
+<div id="map" style="width: 900px; top: 68px; left: 172px;  height: 400px">
+
+</div>
